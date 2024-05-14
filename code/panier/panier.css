@@ -1,16 +1,21 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    display: flex;
+    box-sizing: border-box;   
 }
 
 body {
     background-color: #FCFCFC;
+    display: flex;
 }
 
 header {
     background-color: #172499;
-    height: 100px;  
+    height: 100px; 
+    width: 100%;
+}
+
+header img {
+    margin-top: 15px;
 }
 
