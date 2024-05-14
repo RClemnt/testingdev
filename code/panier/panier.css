@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
 }
 
 body {
@@ -10,5 +11,6 @@ body {
 
 header {
     background-color: #172499;
-    height: 100px;
+    height: 100px;  
 }
+
