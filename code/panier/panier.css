@@ -156,8 +156,51 @@ header img {
 
 .basket-box {
     background-color: #FCFCFC;
-    width: 500px;
+    width: 40%;
     height: 200px;
     margin: 20px 250px 20px 250px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.image-tool img{
+    width: 50%;
+    border-right: 1px solid #717171;
+}
+
+.basket-select {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.name-tool {
+    width: 100%;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.price-tool {
+    width: 100%;
+    font-size: 25px;
+    font-weight: 800;
+    padding-bottom: 10px;
+}
+
+.erase-tool {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    display: flex;
+}
+
+.erase-tool span {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.erase-tool img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
 }
