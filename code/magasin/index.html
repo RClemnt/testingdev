@@ -9,27 +9,38 @@
 </head>
 
 <body>
+    
+    <header>
+        <img src="../images/logo.png" height="70">
+        
+        <ul class="link-menu">
+            <li><a href="../magasin/index.html">Le Magasin</a></li>
+            <li><a href="../panier/index.html">Votre panier</a></li>
+            <li><a href="../ekip/index.html">L'équipe</a></li>
+        </ul>
+
+    </header>
      <!-- Slideshow container -->
     <div class="slideshow-container">
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides">
-        <img src="../images/boite_a_outils.jpg" style="width:100%">
+        <img src="../images/boite_a_outils.png" style="width:100%">
         <div class="text">Boite à outils</div>
         </div>
     
         <div class="mySlides">
-        <img src="../images/cles.jpg" style="width:100%">
+        <img src="../images/cles.png" style="width:100%">
         <div class="text">Jeu de clés</div>
         </div>
     
         <div class="mySlides">
-        <img src="../images/perceuse.jpg" style="width:100%">
+        <img src="../images/perceuse.png" style="width:100%">
         <div class="text">Perceuse</div>
         </div>
 
         <div class="mySlides">
-        <img src="../images/tournevis.jpg" style="width:100%">
+        <img src="../images/tournevis.png" style="width:100%">
         <div class="text">Tournevis</div>
         </div>
     
@@ -46,6 +57,65 @@
         <span class="dot" onclick="currentSlide(3)"></span>
         <span class="dot" onclick="currentSlide(4)"></span>
     </div> 
+
+    <h1>NOS PRODUITS</h1>
+
+    <div class="produits_container">
+        <div class="produit">
+            <img src="../images/boite_a_outils.png" />
+            <p class="nom_produit">Boite à outils</p>
+            <p class="desc_produit">Cette boite à outils est une boîte conçue pour contenir des outils. 
+                Elle est fournit avec des outils. Pratique si vous voulez avoir des outils et les ranger dans une boîte par exemple.</p>
+            <p class="prix">150 024€</p>
+            <form><input type="number" /></form>
+            <button><img src="../images/moins.png" /></button>
+            <button><img src="../images/plus.png" /></button>
+            <button>Ajouter au panier</button>
+        </div>
+
+        <div class="produit">
+            <img src="../images/cles.png" />
+            <p class="nom_produit">Jeu de clés</p>
+            <p class="desc_produit">Attention ce jeu de clés n'est pas un jeu! Ne convient pas aux enfants! A moins que ce soient des enfants bricoleurs.</p>
+            <p class="prix">15€</p>
+            <form><input type="number" /></form>
+            <button><img src="../images/moins.png" /></button>
+            <button><img src="../images/plus.png" /></button>
+            <button>Ajouter au panier</button>
+        </div>
+
+        <div class="produit">
+            <img src="../images/perceuse.png" />
+            <p class="nom_produit">Perceuse</p>
+            <p class="desc_produit">La perceuse est un outil qui permet de percer. Elle contient, entre autres, un moteur et du plastique ainsi qu'un bouton. 
+                Par contre la batterie ne fonctionne plus quand elle est déchargée.</p>
+            <p class="prix">24€</p>
+            <form><input type="number" /></form>
+            <button><img src="../images/moins.png" /></button>
+            <button><img src="../images/plus.png" /></button>
+            <button>Ajouter au panier</button>
+        </div>
+
+        <div class="produit">
+            <img src="../images/tournevis.png" />
+            <p class="nom_produit">Tournevis</p>
+            <p class="desc_produit">Ce tournevis permet de faire des petits trous dans du cellophane, contrairement à ce que son nom indique. 
+                Il est aussi utile pour faire tourner des vis conformément à ce que son nom indique.</p>
+            <p class="prix">1 524€</p>
+            <form><input type="number" /></form>
+            <button><img src="../images/moins.png" /></button>
+            <button><img src="../images/plus.png" /></button>
+            <button>Ajouter au panier</button>
+        </div>
+    </div>
+
+    <h1>PANIER</h1>
+
+    <ul>
+        <li>1 X Boite à outils</li>
+        <li>3 X Tournevis</li>
+    </ul>
+
     <script src="./script.js"></script>
 </body>
 
