@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bricol'shop - Magasin</title>
     <link rel="stylesheet" href="./style.css">
     
 </head>
 
 <body>
-    
+
     <header>
         <img src="../images/logo.png" height="70">
         
         <ul class="link-menu">
             <li><a href="../magasin/index.html">Le Magasin</a></li>
-            <li><a href="../panier/index.html">Votre panier</a></li>
+            <li><a href="../panier/panier.html">Votre panier</a></li>
             <li><a href="../ekip/index.html">L'équipe</a></li>
         </ul>
 
@@ -62,50 +62,66 @@
 
     <div class="produits_container">
         <div class="produit">
-            <img src="../images/boite_a_outils.png" />
-            <p class="nom_produit">Boite à outils</p>
-            <p class="desc_produit">Cette boite à outils est une boîte conçue pour contenir des outils. 
-                Elle est fournit avec des outils. Pratique si vous voulez avoir des outils et les ranger dans une boîte par exemple.</p>
-            <p class="prix">150 024€</p>
-            <form><input type="number" /></form>
-            <button><img src="../images/moins.png" /></button>
-            <button><img src="../images/plus.png" /></button>
-            <button>Ajouter au panier</button>
+            <div>
+                <img src="../images/boite_a_outils.png" class="img_produit" />
+                <p class="nom_produit">Boite à outils</p>
+            </div>
+            <div>
+                <p class="desc_produit">Cette boite à outils est une boîte conçue pour contenir des outils. 
+                    Elle est fournit avec des outils. Pratique si vous voulez avoir des outils et les ranger dans une boîte par exemple.</p>
+                <p class="prix">150 024€</p>
+                <form><input type="number" placeholder="0" min="0" max="10" /></form>
+                <button><img src="../images/moins.png" class="img_button" /></button>
+                <button><img src="../images/plus.png" class="img_button" /></button> <br/>
+                <button>Ajouter au panier</button>
+            </div>
         </div>
 
         <div class="produit">
-            <img src="../images/cles.png" />
-            <p class="nom_produit">Jeu de clés</p>
-            <p class="desc_produit">Attention ce jeu de clés n'est pas un jeu! Ne convient pas aux enfants! A moins que ce soient des enfants bricoleurs.</p>
-            <p class="prix">15€</p>
-            <form><input type="number" /></form>
-            <button><img src="../images/moins.png" /></button>
-            <button><img src="../images/plus.png" /></button>
-            <button>Ajouter au panier</button>
+            <div>
+                <img src="../images/cles.png" class="img_produit" />
+                <p class="nom_produit">Jeu de clés</p>
+            </div>
+            <div>
+                <p class="desc_produit">Attention ce jeu de clés n'est pas un jeu! Ne convient pas aux enfants! A moins que ce soient des enfants bricoleurs.</p>
+                <p class="prix">15€</p>
+                <form><input type="number" placeholder="0" min="0" max="10" /></form>
+                <button><img src="../images/moins.png" class="img_button" /></button>
+                <button><img src="../images/plus.png" class="img_button" /></button> <br/>
+                <button>Ajouter au panier</button>
+            </div>
         </div>
 
         <div class="produit">
-            <img src="../images/perceuse.png" />
-            <p class="nom_produit">Perceuse</p>
-            <p class="desc_produit">La perceuse est un outil qui permet de percer. Elle contient, entre autres, un moteur et du plastique ainsi qu'un bouton. 
-                Par contre la batterie ne fonctionne plus quand elle est déchargée.</p>
-            <p class="prix">24€</p>
-            <form><input type="number" /></form>
-            <button><img src="../images/moins.png" /></button>
-            <button><img src="../images/plus.png" /></button>
-            <button>Ajouter au panier</button>
+            <div>
+                <img src="../images/perceuse.png" class="img_produit" />
+                <p class="nom_produit">Perceuse</p>
+            </div>
+            <div>
+                <p class="desc_produit">La perceuse est un outil qui permet de percer. Elle contient, entre autres, un moteur et du plastique ainsi qu'un bouton. 
+                    Par contre la batterie ne fonctionne plus quand elle est déchargée.</p>
+                <p class="prix">24€</p>
+                <form><input type="number" placeholder="0" min="0" max="10" /></form>
+                <button><img src="../images/moins.png" class="img_button" /></button>
+                <button><img src="../images/plus.png" class="img_button" /></button> <br/>
+                <button>Ajouter au panier</button>
+            </div>
         </div>
 
         <div class="produit">
-            <img src="../images/tournevis.png" />
-            <p class="nom_produit">Tournevis</p>
-            <p class="desc_produit">Ce tournevis permet de faire des petits trous dans du cellophane, contrairement à ce que son nom indique. 
-                Il est aussi utile pour faire tourner des vis conformément à ce que son nom indique.</p>
-            <p class="prix">1 524€</p>
-            <form><input type="number" /></form>
-            <button><img src="../images/moins.png" /></button>
-            <button><img src="../images/plus.png" /></button>
-            <button>Ajouter au panier</button>
+            <div>
+                <img src="../images/tournevis.png" class="img_produit" />
+                <p class="nom_produit">Tournevis</p>
+            </div>
+            <div>
+                <p class="desc_produit">Ce tournevis permet de faire des petits trous dans du cellophane, contrairement à ce que son nom indique. 
+                    Il est aussi utile pour faire tourner des vis conformément à ce que son nom indique.</p>
+                <p class="prix">1 524€</p>
+                <form><input type="number" placeholder="0" min="0" max="10" /></form>
+                <button><img src="../images/moins.png" class="img_button" /></button>
+                <button><img src="../images/plus.png" class="img_button" /></button> <br/>
+                <button>Ajouter au panier</button>
+            </div>
         </div>
     </div>
 
