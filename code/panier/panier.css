@@ -7,6 +7,8 @@
 body {
     background-color: #FCFCFC;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 header {
@@ -19,3 +21,8 @@ header img {
     margin-top: 15px;
 }
 
+.slideshow {
+    background-color: #f6f930;
+    width: 70%;
+    height: 500px;
+}
