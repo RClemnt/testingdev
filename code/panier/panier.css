@@ -1,8 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #FCFCFC;
 }
 
 header {
     background-color: #172499;
-    height: 200px;
+    height: 100px;
 }
