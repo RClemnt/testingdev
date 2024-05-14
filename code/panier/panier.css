@@ -46,7 +46,7 @@ header img {
 }
 
 .link-menu a:hover {   
-    background-color:#a73939;
+    background-color:#ca3c25;
 }
 
 /* Slideshow container */
@@ -149,14 +149,15 @@ header img {
     background-color: #172499 ;
     width: 100%;
     height: 800px;
-    flex-wrap: wrap;
+    display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .basket-box {
     background-color: #FCFCFC;
-    width: 400px;
+    width: 500px;
     height: 200px;
-    margin: 20px;
+    margin: 20px 250px 20px 250px;
+    border-radius: 10px;
 }
