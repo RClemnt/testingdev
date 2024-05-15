@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #FCFCFC;
+    background-color: #f1f1f1;
     display: flex;
     flex-wrap: wrap;    
 }
@@ -54,7 +54,7 @@ header img {
     max-width: 100%;
     position: relative;
     margin: auto;
-    background-color: #f6f930 ;
+
   }
   
 /* Hide the images by default */
@@ -70,7 +70,7 @@ header img {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -85,8 +85,9 @@ header img {
 }
   
 /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover, .next:hover {
+    background-color: rgba(16, 28, 139, 0.8);
+    color: #f1f1f1;
 }
   
 /* Caption text */
@@ -113,7 +114,6 @@ header img {
 .dot-container {
     width: 100%;
     height: 50px;  
-    background-color: #172499;
     padding-top: 10px;
 }
 
@@ -146,7 +146,6 @@ header img {
 /* panier container */
 
 .basket-container {
-    background-color: #172499 ;
     width: 100%;
     height: 800px;
     display: flex;
@@ -162,6 +161,12 @@ header img {
     border-radius: 10px;
     display: flex;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    justify-content: flex-start;
+}
+
+.basket-box:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .image-tool img{
@@ -169,11 +174,10 @@ header img {
     border-right: 1px solid #717171;
 }
 
-.basket-select {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+.basket-select { 
+    flex-direction: column;   
 }
+
 .name-tool {
     width: 100%;
     font-size: 20px;
