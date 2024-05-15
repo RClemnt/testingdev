@@ -25,4 +25,39 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-} 
+}
+
+//Add + or - at basket
+
+function plus(id) {
+  var nb = parseInt(document.querySelector(id).innerHTML);
+  nb++;
+  if(nb > 10)
+    nb = 10;
+  document.querySelector(id).innerHTML = nb;
+}
+
+function moins(id) {
+  var nb = parseInt(document.querySelector(id).innerHTML);
+  nb--;
+  if(nb < 0)
+    nb = 0;
+  document.querySelector(id).innerHTML = nb;
+}
+
+function ajoutPanier(id_qte, nom) {
+  var ul = document.querySelector("#panier");
+  var li = document.createElement("li");
+  var qte = document.querySelector(id_qte).innerHTML;
+  if(qte != "0")
+  {
+    li.appendChild(document.createTextNode(qte + "X " + nom));
+    ul.appendChild(li);
+  }
+}
+
+function erase(id) {
+  var nb = parseInt(document.querySelector(id).innerHTML);
+  nb = 0;
+  document.querySelector(id).innerHTML = nb;
+}
