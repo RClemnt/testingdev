@@ -5,20 +5,48 @@
 }
 
 body {
-    background-color: #FCFCFC;
+    background-color: #f1f1f1;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: wrap;    
 }
 
 header {
     background-color: #172499;
-    height: 100px; 
+    /*height: 100px; */
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 header img {
     margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* menu */
+.link-menu {
+    width: auto;
+}
+
+.link-menu a {
+    padding: 15px 10px 15px 10px;
+}
+
+.link-menu > li {
+    list-style: none;
+    display: inline;
+    padding-left: 25px;
+}
+
+.link-menu a:link,
+.link-menu a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.link-menu a:hover {   
+    background-color:#ca3c25;
 }
 
 /* Slideshow container */
@@ -26,7 +54,7 @@ header img {
     max-width: 100%;
     position: relative;
     margin: auto;
-    background-color: #f6f930 ;
+
   }
   
 /* Hide the images by default */
@@ -42,7 +70,7 @@ header img {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -57,8 +85,9 @@ header img {
 }
   
 /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover, .next:hover {
+    background-color: rgba(16, 28, 139, 0.8);
+    color: #f1f1f1;
 }
   
 /* Caption text */
@@ -85,7 +114,6 @@ header img {
 .dot-container {
     width: 100%;
     height: 50px;  
-    background-color: #172499;
     padding-top: 10px;
 }
 
@@ -97,8 +125,7 @@ header img {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
-    
+    transition: background-color 0.6s ease;   
 }
   
 .active, .dot:hover {
@@ -116,20 +143,137 @@ header img {
     to {opacity: 1}
 }
 
-/* panier container */
+/* basket container */
 
 .basket-container {
-    background-color: #172499 ;
     width: 100%;
-    height: 800px;
-    flex-wrap: wrap;
+    height: auto;
+    display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .basket-box {
     background-color: #FCFCFC;
-    width: 400px;
-    height: 200px;
-    margin: 20px;
+    width: 40%;  
+    margin: 20px 250px 20px 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    justify-content: flex-start;
+}
+
+.basket-box:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.image-tool {
+    width: 50%;
+    padding: 10px 0 10px 0;
+}
+
+.image-tool img{
+    width: 100%;
+    border-right: 1px solid #717171;
+}
+
+.basket-select { 
+    flex-direction: column;   
+}
+
+.name-tool {
+    width: 100%;
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+}
+
+.price-tool {
+    width: 100%;
+    font-size: 25px;
+    font-weight: 800;
+    padding-bottom: 10px;
+    margin-left: 20px;
+}
+
+.erase-tool {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    margin-left: 20px;
+}
+
+
+.erase-tool button img {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(0) invert(1)
+}
+
+.increment {
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+.checkout {
+    display: flex;
+    width: 40%;
+    margin: 40px 0 40px 0;
+    justify-content: center;
+}
+
+
+
+/* Buttons CSS */
+.button-57 {
+    margin-right: 10px;
+  background-color: #172499;
+  border: 0;
+  border-radius: 72px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 10px 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  overflow: hidden;
+}
+
+.button-57:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button-57:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button-57 {
+    padding: 16px 48px;
+  }
 }

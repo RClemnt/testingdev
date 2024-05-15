@@ -9,7 +9,14 @@
 
 <body>
     <header>
-        <img src="../images/logo.png" height="70">
+        <img src="../images/logo.png" height="70" href="../magasin/index.html">
+        
+        <ul class="link-menu">
+            <li><a href="../magasin/index.html">Le Magasin</a></li>
+            <li><a href="../panier/panier.html">Votre panier</a></li>
+            <li><a href="../ekip/index.html">L'équipe</a></li>
+        </ul>
+
     </header>
 
       <!-- Slideshow container -->
@@ -17,22 +24,22 @@
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
-        <img src="../images/boite_a_outils.jpg" style="width:100%" height="400">
+        <img src="../images/boite_a_outils.png" style="width:100%" height="400">
         <div class="text">Boite à outils</div>
         </div>
     
         <div class="mySlides fade">
-        <img src="../images/cles.jpg" style="width:100%" height="400">
+        <img src="../images/cles.png" style="width:100%" height="400">
         <div class="text">Jeu de clés</div>
         </div>
     
         <div class="mySlides fade">
-        <img src="../images/perceuse.jpg" style="width:100%" height="400">
+        <img src="../images/perceuse.png" style="width:100%" height="400">
         <div class="text">Perceuse</div>
         </div>
 
         <div class="mySlides fade">
-        <img src="../images/tournevis.jpg" style="width:100%" height="400">
+        <img src="../images/tournevis.png" style="width:100%" height="400">
         <div class="text">Tournevis</div>
         </div>
     
@@ -52,14 +59,63 @@
 
     <div class="basket-container">
         <div class="basket-box">
-        </div>
-        <div class="basket-box">
-        </div>
-        <div class="basket-box">
+            <div class="image-tool">
+                <img src="../images/boite_a_outils.png" >
+            </div>
+
+            <div class="basket-select">
+                <div class="name-tool">Boite à outils</div>
+                <div class="price-tool">65,00€</div>
+                <div class="erase-tool">
+                    <button class="button-57" role="button"><img src="../images/poubelle.png"></button>
+                    <button class="button-57" role="button"><img src="../images/moins.png"></button>
+                    <div class="increment">3</div>
+                    <button class="button-57" role="button"><img src="../images/plus.png"></button>
+                </div>
+            </div>
         </div>
 
+        <div class="basket-box">
+            <div class="image-tool">
+                <img src="../images/cles.png">
+            </div>
+
+            <div class="basket-select">
+                <div class="name-tool">Malette clé à douilles</div>
+                <div class="price-tool">59,00€</div>
+                <div class="erase-tool">
+                    <button class="button-57" role="button"><img src="../images/poubelle.png"></button>
+                    <button class="button-57" role="button"><img src="../images/moins.png"></button>
+                    <div class="increment">3</div>
+                    <button class="button-57" role="button"><img src="../images/plus.png"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="basket-box">
+            <div class="image-tool">
+                <img src="../images/perceuse.png">
+            </div>
+
+            <div class="basket-select">
+                <div class="name-tool">Perceuse</div>
+                <div class="price-tool">150,00€</div>
+                <div class="erase-tool">
+                    <button class="button-57" role="button"><img src="../images/poubelle.png"></button>
+                    <button class="button-57" role="button"><img src="../images/moins.png"></button>
+                    <div class="increment">3</div>
+                    <button class="button-57" role="button"><img src="../images/plus.png"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout">
+            <button class="button-57" role="button">Checkout</button>
+        </div>
     </div>
-
+    <footer>
+        Conditions légales
+    </footer>
     <script src="panier.js"></script>
 </body>
 </html>
