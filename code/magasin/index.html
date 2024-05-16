@@ -129,10 +129,14 @@
     <h1>PANIER</h1>
 
     <ul id="panier">
-        <li id="panier1"><span id="nbPanier1">0</span>X Boite à outils</li>
-        <li id="panier2"><span id="nbPanier2">0</span>X Jeu de clés</li>
-        <li id="panier3"><span id="nbPanier3">0</span>X Perceuse</li>
-        <li id="panier4"><span id="nbPanier4">0</span>X Tournevis</li>
+        <li id="panier1"><span id="nbPanier1">0</span>X Boite à outils
+            <button><img src="../images/poubelle.png" onclick="supprProduit('#panier1', '#nbPanier1', 'Boite à outils')" /></button></li>
+        <li id="panier2"><span id="nbPanier2">0</span>X Jeu de clés
+            <button><img src="../images/poubelle.png" onclick="supprProduit('#panier2', '#nbPanier2', 'jeu de clés')" /></button></li>
+        <li id="panier3"><span id="nbPanier3">0</span>X Perceuse
+            <button><img src="../images/poubelle.png" onclick="supprProduit('#panier3', '#nbPanier3', 'perceuse')" /></button></li>
+        <li id="panier4"><span id="nbPanier4">0</span>X Tournevis
+            <button><img src="../images/poubelle.png" onclick="supprProduit('#panier4', '#nbPanier4', 'tournevis')" /></button></li>
     </ul>
 
     <script src="./script.js"></script>
