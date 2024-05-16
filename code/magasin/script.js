@@ -1,5 +1,11 @@
 let slideIndex = 1;
 showSlides(slideIndex);
+var qtePanier = {
+  "#nbPanier1":0,
+  "#nbPanier2":0,
+  "#nbPanier3":0,
+  "#nbPanier4":0
+};
 
 // Next/previous controls
 function plusSlides(n) {
@@ -43,13 +49,9 @@ function moins(id) {
   document.querySelector(id).innerHTML = nb;
 }
 
-function ajoutPanier(id_qte, nom) {
-  var ul = document.querySelector("#panier");
-  var li = document.createElement("li");
-  var qte = document.querySelector(id_qte).innerHTML;
-  if(qte != "0")
-  {
-    li.appendChild(document.createTextNode(qte + "X " + nom));
-    ul.appendChild(li);
-  }
+function ajoutPanier(id_qte, id_li, id_span) {
+  var qte = parseInt(document.querySelector(id_qte).innerHTML);
+  document.querySelector(id_li).style.display = "block";
+  qtePanier[id_span] += qte;
+  document.querySelector(id_span).innerHTML = qtePanier[id_span];
 }

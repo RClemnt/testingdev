@@ -122,7 +122,6 @@ button {
 }
 
 button {
-margin-right: 10px;
 background-color: #172499;
 border: 0;
 border-radius: 72px;
@@ -220,4 +219,8 @@ header img {
 
 .link-menu a:hover {   
   background-color:#ca3c25;
+}
+
+#panier1, #panier2, #panier3, #panier4 {
+  display : none;
 }
