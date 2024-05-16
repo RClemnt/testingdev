@@ -95,3 +95,12 @@ function totalBasket(tot1, tot2, tot3) {
   totalGen = total1 + total2 + total3;
   document.querySelector('#totalGeneral').innerHTML = totalGen;
 }
+
+function deleteProduct(id) {
+if(window.confirm('Etes vous sûr(e) de vouloir supprimer ce produit ?')) {
+  if(window.confirm('Etes vous sûr(e), sûr(e) ?')) {
+    window.confirm('Etes vous sûr(e), sûr(e), sûr(e) ?')
+  }
+  document.querySelectord(id).remove();
+}   
+}

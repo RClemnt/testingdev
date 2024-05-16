@@ -186,6 +186,7 @@ header img {
 .delete-product button {
     font-size: 10px;
     position: absolute;
+    
 }
 
 .name-tool {
@@ -361,6 +362,13 @@ footer {
 
 @media (min-width: 768px) {
   .button-57 {
-    padding: 16px 48px;
+    padding: 8px 24px;
   }
 }
+
+@media (min-width: 768px) {
+    .button-58 {
+      padding: 8px 8px;
+    }
+  }
+  
