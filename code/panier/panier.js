@@ -84,23 +84,29 @@ function sousTotMoins(idNb, idSt, idPb) {
   }
   document.querySelector(idSt).innerHTML = prix;
 
-  totalBasket('#sousTotal1', '#sousTotal2', '#sousTotal3');
+totalBasket('#sousTotal1', '#sousTotal2', '#sousTotal3');
 }
 
 function totalBasket(tot1, tot2, tot3) {
   var total1 = parseFloat(document.querySelector(tot1).innerHTML);
   var total2 = parseFloat(document.querySelector(tot2).innerHTML);
   var total3 = parseFloat(document.querySelector(tot3).innerHTML);
+  
 
   totalGen = total1 + total2 + total3;
+  //var totalGen = parseFloat(document.querySelectorAll('.price-tool div'));
   document.querySelector('#totalGeneral').innerHTML = totalGen;
 }
 
-function deleteProduct(id) {
-if(window.confirm('Etes vous sûr(e) de vouloir supprimer ce produit ?')) {
-  if(window.confirm('Etes vous sûr(e), sûr(e) ?')) {
-    window.confirm('Etes vous sûr(e), sûr(e), sûr(e) ?')
+function deleteProduct(idBox, idSt) {
+  if(window.confirm('Etes vous sûr(e) de vouloir supprimer ce produit ?')) {
+    if(window.confirm('Etes vous sûr(e), sûr(e) ?')) {
+      window.confirm('Etes vous sûr(e), sûr(e), sûr(e) ?') 
+    } 
+      document.querySelector(idSt).innerHTML = 0;
+
+      totalBasket('#sousTotal1', '#sousTotal2', '#sousTotal3');
+      
+      setTimeout(document.querySelector(idBox).remove(), 1000);
   }
-  document.querySelectord(id).remove();
-}   
 }
