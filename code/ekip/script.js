@@ -29,7 +29,10 @@ document.addEventListener("DOMContentLoaded", function() {
         descriptionPara.textContent = description;
         memberDiv.appendChild(descriptionPara);
 
+        //
+        //
         // Créer et ajouter le bouton d'édition
+        
         const editButton = document.createElement('button');
         editButton.textContent = 'Éditer';
         editButton.onclick = function() {
@@ -61,6 +64,9 @@ document.addEventListener("DOMContentLoaded", function() {
         };
         memberDiv.appendChild(editButton);
 
+
+        //
+        //
         // Créer et ajouter le bouton de suppression
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Supprimer';
@@ -93,3 +99,12 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector('#add-member-form').style.display = 'none';
     });
 });
+
+
+
+
+
+
+
+
+
