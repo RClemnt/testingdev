@@ -66,10 +66,10 @@ function supprProduit(id_tr, id_span, nom) {
         if(window.confirm("Cela supprimera également la quantité que vous avez entrer!")) {
           setTimeout(regret, 4000, id_tr, id_span, nom, qtePanier[id_span]);
           qtePanier[id_span] = 0;
-          document.querySelector(id_tr).style.visibility = "collapse";
+          document.querySelector(id_tr).style.visibility = "hidden";
           var val = Object.values(qtePanier)
           if(val[0] == 0 && val[1] == 0 && val[2] == 0 && val[3] == 0) {
-            document.querySelector("#panier").style.visibility = "collapse";
+            document.querySelector("#panier").style.visibility = "hidden";
           }
         }
       }

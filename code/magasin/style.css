@@ -225,14 +225,14 @@ header img {
 }
 
 #panier1, #panier2, #panier3, #panier4 {
-  visibility: collapse;
+  visibility: hidden;
 }
 
 #panier {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  visibility: collapse;
+  visibility: hidden;
 }
 
 table {
@@ -274,4 +274,14 @@ table thead th:nth-child(odd) {
 
 table tr:nth-child(even) {
   background: #F8F8F8;
+}
+
+footer {
+  height: 80px;
+  background-color: #172499;
+  margin-top: 20px;
+  width: 100%;
+  color: #FCFCFC;
+  padding: 10px;
+  font-size: 10px;
 }
