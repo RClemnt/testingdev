@@ -68,12 +68,13 @@
 
             <div class="basket-select">
                 <div class="name-tool">Boite à outils</div>
-                <div class="price-tool">65,00€</div>
+                <div class="price-base">Prix de base : &nbsp;<div id="prixBase1">65</div>,00€</div>
+                <div class="price-tool">Sous-total : &nbsp;<div id="sousTotal1">65</div>,00€</div>
                 <div class="erase-tool">
-                    <button onclick="erase('#nombre1')" class="button-57" role="button"><img src="../images/poubelle.png"></button>
-                    <button onclick="moins('#nombre1')" class="button-57" role="button"><img src="../images/moins.png"></button>
-                    <div class="increment" id="nombre1">3</div>
-                    <button onclick="plus('#nombre1')" class="button-57" role="button"><img src="../images/plus.png"></button>
+                    <button onclick="erase('#nombre1', '#sousTotal1')" class="button-57" role="button"><img src="../images/poubelle.png"></button>
+                    <button onclick="moins('#nombre1'), sousTotMoins('#nombre1', '#sousTotal1', '#prixBase1')" class="button-57" role="button"><img src="../images/moins.png"></button>
+                    <div class="increment" id="nombre1">1</div>
+                    <button onclick="plus('#nombre1'), sousTotPlus('#nombre1', '#sousTotal1', '#prixBase1')" class="button-57" role="button"><img src="../images/plus.png"></button>
                 </div>
             </div>
         </div>
@@ -85,39 +86,51 @@
 
             <div class="basket-select">
                 <div class="name-tool">Malette clé à douilles</div>
-                <div class="price-tool">59,00€</div>
+                <div class="price-base">Prix de base : &nbsp;<div id="prixBase2">59</div>,00€</div>
+                <div class="price-tool">Sous-total : &nbsp;<div id="sousTotal2">59</div>,00€</div>
                 <div class="erase-tool">
-                    <button onclick="erase('#nombre2')" class="button-57" role="button"><img src="../images/poubelle.png"></button>
-                    <button onclick="moins('#nombre2')" class="button-57" role="button"><img src="../images/moins.png"></button>
-                    <div class="increment" id="nombre2">3</div>
-                    <button onclick="plus('#nombre2')" class="button-57" role="button"><img src="../images/plus.png"></button>
+                    <button onclick="erase('#nombre2', '#sousTotal2')" class="button-57" role="button"><img src="../images/poubelle.png"></button>
+                    <button onclick="moins('#nombre2'), sousTotMoins('#nombre2', '#sousTotal2', '#prixBase2')" class="button-57" role="button"><img src="../images/moins.png"></button>
+                    <div class="increment" id="nombre2">1</div>
+                    <button onclick="plus('#nombre2'), sousTotPlus('#nombre2', '#sousTotal2', '#prixBase2')" class="button-57" role="button"><img src="../images/plus.png"></button>
                 </div>
             </div>
         </div>
 
         <div class="basket-box">
+            <div class="delete-product"><button class="button-58">X</button></div>
             <div class="image-tool">
                 <img src="../images/perceuse.png">
             </div>
 
             <div class="basket-select">
+                
                 <div class="name-tool">Perceuse</div>
-                <div class="price-tool">150,00€</div>
+                <div class="price-base">Prix de base : &nbsp;<div id="prixBase3">150</div>,00€</div>
+                <div class="price-tool">Sous-total : &nbsp;<div id="sousTotal3">150</div>,00€</div>
                 <div class="erase-tool">
-                    <button onclick="erase('#nombre3')" class="button-57" role="button"><img src="../images/poubelle.png"></button>
-                    <button onclick="moins('#nombre3')" class="button-57" role="button"><img src="../images/moins.png"></button>
-                    <div class="increment" id="nombre3">3</div>
-                    <button onclick="plus('#nombre3')" class="button-57" role="button"><img src="../images/plus.png"></button>
+                    <button onclick="erase('#nombre3', '#sousTotal3')" class="button-57" role="button"><img src="../images/poubelle.png"></button>
+                    <button onclick="moins('#nombre3'), sousTotMoins('#nombre3', '#sousTotal3', '#prixBase3')" class="button-57" role="button"><img src="../images/moins.png"></button>
+                    <div class="increment" id="nombre3">1</div>
+                    <button onclick="plus('#nombre3'), sousTotPlus('#nombre3', '#sousTotal3', '#prixBase3')" class="button-57" role="button"><img src="../images/plus.png"></button>
                 </div>
             </div>
         </div>
 
-        <div class="checkout">
-            <button class="button-57" role="button">Checkout</button>
+        <div class="total-basket">Total du panier : &nbsp;
+            <div id="totalGeneral">0</div>,00€
+
+            <div class="checkout">
+                <button class="button-57" role="button">Valider le panier</button>
+            </div>  
         </div>
+
+        
     </div>
     <footer>
-        Conditions légales
+        <p>Conditions illégales : Attention, bricoleurs téméraires ! Avant de vous lancer dans des travaux clandestins à la lumière de la lune, rappelez-vous que les marteaux, scies et perceuses peuvent être aussi dangereux que des ninjas en colère dans les mains de novices ! 🛠️💥</p>
+        <p> Évitez les bobos et les ennuis judiciaires en optant pour des projets légaux et sécurisés. Et si jamais vous vous retrouvez à bricoler hors-la-loi, au moins assurez-vous d'avoir un alibi solide et un bon kit de premiers secours ! 😉</p>
+        <p> #BricolageClandestin #AttentionChantiersInterdits"</p>
     </footer>
     <script src="panier.js"></script>
 </body>
