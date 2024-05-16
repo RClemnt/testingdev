@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panier</title>
-    <link rel="stylesheet" href="panier.css">   
+    <title>Votre Panier</title>
+    <link rel="stylesheet" href="panier.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yatra+One&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
@@ -67,10 +70,10 @@
                 <div class="name-tool">Boite à outils</div>
                 <div class="price-tool">65,00€</div>
                 <div class="erase-tool">
-                    <button class="button-57" role="button"><img src="../images/poubelle.png"></button>
-                    <button class="button-57" role="button"><img src="../images/moins.png"></button>
-                    <div class="increment">3</div>
-                    <button class="button-57" role="button"><img src="../images/plus.png"></button>
+                    <button onclick="erase('#nombre1')" class="button-57" role="button"><img src="../images/poubelle.png"></button>
+                    <button onclick="moins('#nombre1')" class="button-57" role="button"><img src="../images/moins.png"></button>
+                    <div class="increment" id="nombre1">3</div>
+                    <button onclick="plus('#nombre1')" class="button-57" role="button"><img src="../images/plus.png"></button>
                 </div>
             </div>
         </div>
@@ -84,10 +87,10 @@
                 <div class="name-tool">Malette clé à douilles</div>
                 <div class="price-tool">59,00€</div>
                 <div class="erase-tool">
-                    <button class="button-57" role="button"><img src="../images/poubelle.png"></button>
-                    <button class="button-57" role="button"><img src="../images/moins.png"></button>
-                    <div class="increment">3</div>
-                    <button class="button-57" role="button"><img src="../images/plus.png"></button>
+                    <button onclick="erase('#nombre2')" class="button-57" role="button"><img src="../images/poubelle.png"></button>
+                    <button onclick="moins('#nombre2')" class="button-57" role="button"><img src="../images/moins.png"></button>
+                    <div class="increment" id="nombre2">3</div>
+                    <button onclick="plus('#nombre2')" class="button-57" role="button"><img src="../images/plus.png"></button>
                 </div>
             </div>
         </div>
@@ -101,10 +104,10 @@
                 <div class="name-tool">Perceuse</div>
                 <div class="price-tool">150,00€</div>
                 <div class="erase-tool">
-                    <button class="button-57" role="button"><img src="../images/poubelle.png"></button>
-                    <button class="button-57" role="button"><img src="../images/moins.png"></button>
-                    <div class="increment">3</div>
-                    <button class="button-57" role="button"><img src="../images/plus.png"></button>
+                    <button onclick="erase('#nombre3')" class="button-57" role="button"><img src="../images/poubelle.png"></button>
+                    <button onclick="moins('#nombre3')" class="button-57" role="button"><img src="../images/moins.png"></button>
+                    <div class="increment" id="nombre3">3</div>
+                    <button onclick="plus('#nombre3')" class="button-57" role="button"><img src="../images/plus.png"></button>
                 </div>
             </div>
         </div>
