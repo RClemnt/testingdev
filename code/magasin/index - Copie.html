@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bricol'shop - Magasin</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+
+<body>
+
+    <header>
+        <img src="../images/logo.png" height="70">
+        
+        <ul class="link-menu">
+            <li><a href="../magasin/index.html">Le Magasin</a></li>
+            <li><a href="../panier/panier.html">Votre panier</a></li>
+            <li><a href="../ekip/index.html">L'équipe</a></li>
+        </ul>
+
+    </header>
+<<<<<<< HEAD
+    <div class="site">
+     <!-- Slideshow container -->
+=======
+    <!-- Slideshow container -->
+>>>>>>> 18fdb2cbb208fe2c7b891173cf7b706842e07cc5
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides">
+        <img src="../images/boite_a_outils.png" style="width:100%">
+        <div class="text">Boite à outils</div>
+        </div>
+    
+        <div class="mySlides">
+        <img src="../images/cles.png" style="width:100%">
+        <div class="text">Jeu de clés</div>
+        </div>
+    
+        <div class="mySlides">
+        <img src="../images/perceuse.png" style="width:100%">
+        <div class="text">Perceuse</div>
+        </div>
+
+        <div class="mySlides">
+        <img src="../images/tournevis.png" style="width:100%">
+        <div class="text">Tournevis</div>
+        </div>
+    
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br/>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div> 
+    <br/>
+
+    <h1>NOS PRODUITS</h1>
+
+    <div class="produits_container">
+        <div class="produit">
+            <div>
+                <img src="../images/boite_a_outils.png" class="img_produit" />
+                <p class="nom_produit">Boite à outils</p>
+            </div>
+            <div>
+                <p class="desc_produit">Cette boite à outils est une boîte conçue pour contenir des outils. 
+                    Elle est fournit avec des outils. Pratique si vous voulez avoir des outils et les ranger dans une boîte par exemple.</p>
+                <br/><p class="prix">65,00€</p>
+                <br/><button onclick="moins('#nombre1')"><img src="../images/moins.png" class="img_button" /></button>
+                <p class="nombre_produit" id="nombre1">0</p>
+                <button onclick="plus('#nombre1')"><img src="../images/plus.png" class="img_button" /></button> <br/>
+                <button onclick="ajoutPanier('#nombre1', '#panier1', '#nbPanier1')">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="produit">
+            <div>
+                <img src="../images/cles.png" class="img_produit" />
+                <p class="nom_produit">Jeu de clés</p>
+            </div>
+            <div>
+                <p class="desc_produit">Attention ce jeu de clés n'est pas un jeu! Ne convient pas aux enfants! A moins que ce soient des enfants bricoleurs.</p>
+                <br/><p class="prix">59,00€</p>
+                <br/><button onclick="moins('#nombre2')"><img src="../images/moins.png" class="img_button" /></button>
+                <p class="nombre_produit" id="nombre2">0</p>
+                <button onclick="plus('#nombre2')"><img src="../images/plus.png" class="img_button" /></button> <br/>
+                <button onclick="ajoutPanier('#nombre2', '#panier2', '#nbPanier2')">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="produit">
+            <div>
+                <img src="../images/perceuse.png" class="img_produit" />
+                <p class="nom_produit">Perceuse</p>
+            </div>
+            <div>
+                <p class="desc_produit">La perceuse est un outil qui permet de percer. Elle contient, entre autres, un moteur et du plastique ainsi qu'un bouton. 
+                    Par contre la batterie ne fonctionne plus quand elle est déchargée.</p>
+                <br/><p class="prix">150,00€</p>
+                <br/><button onclick="moins('#nombre3')"><img src="../images/moins.png" class="img_button" /></button>
+                <p class="nombre_produit" id="nombre3">0</p>
+                <button onclick="plus('#nombre3')"><img src="../images/plus.png" class="img_button" /></button> <br/>
+                <button onclick="ajoutPanier('#nombre3', '#panier3', '#nbPanier3')">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="produit">
+            <div>
+                <img src="../images/tournevis.png" class="img_produit" />
+                <p class="nom_produit">Tournevis</p>
+            </div>
+            <div>
+                <p class="desc_produit">Ce tournevis permet de faire des petits trous dans du cellophane, contrairement à ce que son nom indique. 
+                    Il est aussi utile pour faire tourner des vis conformément à ce que son nom indique.</p>
+                <br/><p class="prix">15,24€</p>
+                <br/><button onclick="moins('#nombre4')"><img src="../images/moins.png" class="img_button" /></button>
+                <p class="nombre_produit" id="nombre4">0</p>
+                <button onclick="plus('#nombre4')"><img src="../images/plus.png" class="img_button" /></button> <br/>
+                <button onclick="ajoutPanier('#nombre4', '#panier4', '#nbPanier4')">Ajouter au panier</button>
+            </div>
+        </div>
+    </div>
+
+    <h1>PANIER</h1>
+
+    <!-- <ul id="panier" class="border_test">
+        <li id="panier1"><span id="nbPanier1">0</span>X Boite à outils
+            <button><img src="../images/poubelle.png" onclick="supprProduit('#panier1', '#nbPanier1', 'Boite à outils')" /></button></li>
+        <li id="panier2"><span id="nbPanier2">0</span>X Jeu de clés
+            <button><img src="../images/poubelle.png" onclick="supprProduit('#panier2', '#nbPanier2', 'jeu de clés')" /></button></li>
+        <li id="panier3"><span id="nbPanier3">0</span>X Perceuse
+            <button><img src="../images/poubelle.png" onclick="supprProduit('#panier3', '#nbPanier3', 'perceuse')" /></button></li>
+        <li id="panier4"><span id="nbPanier4">0</span>X Tournevis
+            <button><img src="../images/poubelle.png" onclick="supprProduit('#panier4', '#nbPanier4', 'tournevis')" /></button></li>
+    </ul> -->
+
+    <table id="panier">
+        <thead><tr>
+            <td>Quantité</td>
+            <td>Nom</td>
+            <td>Prix à l'unité</td>
+            <td>Supprimer</td>
+        </tr></thead>
+        <tbody><tr id="panier1">
+            <td id="nbPanier1">0</td>
+            <td>Boite à outils</td>
+            <td>65,00€</td>
+            <td><button onclick="supprProduit('#panier1', '#nbPanier1', 'boite à outils')"><img src="../images/poubelle.png" /></button></td>
+        </tr><tr id="panier2">
+            <td id="nbPanier2">0</td>
+            <td>Jeu de clés</td>
+            <td>59,00€</td>
+            <td><button onclick="supprProduit('#panier2', '#nbPanier2', 'jeu de clés')"><img src="../images/poubelle.png" /></button></td>
+        </tr><tr id="panier3">
+            <td id="nbPanier3">0</td>
+            <td>Perceuse</td>
+            <td>150,00€</td>
+            <td><button onclick="supprProduit('#panier3', '#nbPanier3', 'perceuse')"><img src="../images/poubelle.png" /></button></td>
+        </tr><tr id="panier4">
+            <td id="nbPanier4">0</td>
+            <td>Tournevis</td>
+            <td>15,24€</td>
+            <td><button onclick="supprProduit('#panier4', '#nbPanier4', 'tournevis')"><img src="../images/poubelle.png" /></button></td>
+        </tr></tbody>
+    </table>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,3 +1,5 @@
+totalBasket('#sousTotal1', '#sousTotal2', '#sousTotal3');
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -30,7 +32,7 @@ function showSlides(n) {
 //Add + or - at basket
 
 function plus(id) {
-  var nb = parseInt(document.querySelector(id).innerHTML);
+  var nb = parseFloat(document.querySelector(id).innerHTML);
   nb++;
   if(nb > 10)
     nb = 10;
@@ -38,26 +40,67 @@ function plus(id) {
 }
 
 function moins(id) {
-  var nb = parseInt(document.querySelector(id).innerHTML);
+  var nb = parseFloat(document.querySelector(id).innerHTML);
   nb--;
   if(nb < 0)
     nb = 0;
   document.querySelector(id).innerHTML = nb;
 }
 
-function ajoutPanier(id_qte, nom) {
-  var ul = document.querySelector("#panier");
-  var li = document.createElement("li");
-  var qte = document.querySelector(id_qte).innerHTML;
-  if(qte != "0")
-  {
-    li.appendChild(document.createTextNode(qte + "X " + nom));
-    ul.appendChild(li);
-  }
+function erase(idNb, idSt) {
+  var nb = parseFloat(document.querySelector(idNb).innerHTML);
+  var st = parseFloat(document.querySelector(idSt).innerHTML);
+  nb = 0;
+  st = 0;
+  document.querySelector(idNb).innerHTML = nb;
+  document.querySelector(idSt).innerHTML = st;
+
+  totalBasket('#sousTotal1', '#sousTotal2', '#sousTotal3');
 }
 
-function erase(id) {
-  var nb = parseInt(document.querySelector(id).innerHTML);
-  nb = 0;
-  document.querySelector(id).innerHTML = nb;
+function sousTotPlus(idNb, idSt, idPb) {
+  var nb = parseFloat(document.querySelector(idNb).innerHTML);
+  var prix = parseFloat(document.querySelector(idSt).innerHTML);
+  var prixBase = parseFloat(document.querySelector(idPb).innerHTML);
+  var prixMax = prixBase * 10;
+  nb++;
+  prix = prix + prixBase;
+  if(prix > prixMax) {
+    prix = prixMax;
+  }
+  document.querySelector(idSt).innerHTML = prix;
+
+  totalBasket('#sousTotal1', '#sousTotal2', '#sousTotal3');
+}
+
+function sousTotMoins(idNb, idSt, idPb) {
+  var nb = parseFloat(document.querySelector(idNb).innerHTML);
+  var prix = parseFloat(document.querySelector(idSt).innerHTML);
+  var prixBase = parseFloat(document.querySelector(idPb).innerHTML);
+  nb--;
+  prix = prix - prixBase;
+  if (prix < 0) {
+    prix = 0;
+  }
+  document.querySelector(idSt).innerHTML = prix;
+
+  totalBasket('#sousTotal1', '#sousTotal2', '#sousTotal3');
+}
+
+function totalBasket(tot1, tot2, tot3) {
+  var total1 = parseFloat(document.querySelector(tot1).innerHTML);
+  var total2 = parseFloat(document.querySelector(tot2).innerHTML);
+  var total3 = parseFloat(document.querySelector(tot3).innerHTML);
+
+  totalGen = total1 + total2 + total3;
+  document.querySelector('#totalGeneral').innerHTML = totalGen;
+}
+
+function deleteProduct(id) {
+if(window.confirm('Etes vous sûr(e) de vouloir supprimer ce produit ?')) {
+  if(window.confirm('Etes vous sûr(e), sûr(e) ?')) {
+    window.confirm('Etes vous sûr(e), sûr(e), sûr(e) ?')
+  }
+  document.querySelectord(id).remove();
+}   
 }
