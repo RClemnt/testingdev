@@ -20,6 +20,7 @@
         </ul>
 
     </header>
+    <div class="site">
      <!-- Slideshow container -->
     <div class="slideshow-container">
 
@@ -128,7 +129,7 @@
 
     <h1>PANIER</h1>
 
-    <ul id="panier">
+    <!-- <ul id="panier" class="border_test">
         <li id="panier1"><span id="nbPanier1">0</span>X Boite à outils
             <button><img src="../images/poubelle.png" onclick="supprProduit('#panier1', '#nbPanier1', 'Boite à outils')" /></button></li>
         <li id="panier2"><span id="nbPanier2">0</span>X Jeu de clés
@@ -137,7 +138,38 @@
             <button><img src="../images/poubelle.png" onclick="supprProduit('#panier3', '#nbPanier3', 'perceuse')" /></button></li>
         <li id="panier4"><span id="nbPanier4">0</span>X Tournevis
             <button><img src="../images/poubelle.png" onclick="supprProduit('#panier4', '#nbPanier4', 'tournevis')" /></button></li>
-    </ul>
+    </ul> -->
+
+    <table id="panier">
+        <thead><tr>
+            <td>Quantité</td>
+            <td>Nom</td>
+            <td>Prix à l'unité</td>
+            <td>Supprimer</td>
+        </tr></thead>
+        <tbody><tr id="panier1">
+            <td id="nbPanier1">0</td>
+            <td>Boite à outils</td>
+            <td>65,00€</td>
+            <td><button onclick="supprProduit('#panier1', '#nbPanier1', 'boite à outils')"><img src="../images/poubelle.png" /></button></td>
+        </tr><tr id="panier2">
+            <td id="nbPanier2">0</td>
+            <td>Jeu de clés</td>
+            <td>59,00€</td>
+            <td><button onclick="supprProduit('#panier2', '#nbPanier2', 'jeu de clés')"><img src="../images/poubelle.png" /></button></td>
+        </tr><tr id="panier3">
+            <td id="nbPanier3">0</td>
+            <td>Perceuse</td>
+            <td>150,00€</td>
+            <td><button onclick="supprProduit('#panier3', '#nbPanier3', 'perceuse')"><img src="../images/poubelle.png" /></button></td>
+        </tr><tr id="panier4">
+            <td id="nbPanier4">0</td>
+            <td>Tournevis</td>
+            <td>15,24€</td>
+            <td><button onclick="supprProduit('#panier4', '#nbPanier4', 'tournevis')"><img src="../images/poubelle.png" /></button></td>
+        </tr></tbody>
+    </table>
+    </div>
 
     <script src="./script.js"></script>
 </body>
