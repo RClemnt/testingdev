@@ -1,4 +1,9 @@
-* {box-sizing:border-box}
+* {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -36,12 +41,12 @@
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,255,0.8);
+  background-color: rgba(23,36,153,0.8);
 }
 
 /* Caption text */
 .text {
-  color: blue;
+  color: #172499;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -63,7 +68,7 @@
 }
 
 .active, .dot:hover {
-  background-color: #00b;
+  background-color: #172499;
 }
 
 .produits_container {
@@ -74,7 +79,7 @@
 
 .produit {
   background-color: #fcfcfc;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   width: 40%;
   margin-bottom: 10px;
@@ -93,9 +98,13 @@
   height: 200px;
 }
 
-.img_button {
+button img {
+  display: flex;
   width: 20px;
   height: 20px;
+  align-items: center;
+  justify-content: center;
+  filter: brightness(0) invert(1)
 }
 
 .nom_produit {
@@ -104,11 +113,59 @@
 
 h1 {
   text-align: center;
-  color: blue;
+  color: #172499;
+  margin-bottom: 15px;
 }
 
 button {
   margin-bottom: 5px;
+}
+
+button {
+background-color: #172499;
+border: 0;
+border-radius: 72px;
+color: #fff;
+cursor: pointer;
+display: inline-block;
+font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+font-size: 15px;
+font-weight: 600;
+outline: 0;
+padding: 10px 10px;
+position: relative;
+text-align: center;
+text-decoration: none;
+transition: all .3s;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+overflow: hidden;
+}
+
+button:before {
+background-color: initial;
+background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+border-radius: 125px;
+content: "";
+height: 50%;
+left: 4%;
+opacity: .5;
+position: absolute;
+top: 0;
+transition: all .3s;
+width: 92%;
+}
+
+button:hover {
+box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+button {
+  padding: 8px 24px;
+}
 }
 
 .border_test {
@@ -162,4 +219,8 @@ header img {
 
 .link-menu a:hover {   
   background-color:#ca3c25;
+}
+
+#panier1, #panier2, #panier3, #panier4 {
+  display : none;
 }

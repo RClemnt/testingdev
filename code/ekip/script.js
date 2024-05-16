@@ -1,16 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Récupérer les éléments du DOM nécessaires
-    const addMemberForm = document.querySelector('#add-member-form');
-    const editForm = document.querySelector('#edit-member-form');
-    const editNameInput = document.querySelector('#edit-name');
-    const editPositionInput = document.querySelector('#edit-position');
-    const editDescriptionInput = document.querySelector('#edit-description');
-    const teamContainer = document.querySelector('#team-container');
-    const createProfileForm = document.querySelector('#add-member-form');
-
     // Fonction pour ajouter un membre d'équipe
     function addTeamMember(event) {
-        // Empêcher le comportement par défaut du formulaire
         event.preventDefault();
 
         // Récupérer les valeurs du formulaire
@@ -44,27 +34,29 @@ document.addEventListener("DOMContentLoaded", function() {
         editButton.textContent = 'Éditer';
         editButton.onclick = function() {
             // Afficher le formulaire d'édition
-            addMemberForm.style.display = 'none';
+            document.querySelector('#add-member-form').style.display = 'none';
+            const editForm = document.querySelector('#edit-member-form');
             editForm.style.display = 'block';
 
             // Pré-remplir les champs avec les informations actuelles
-            const memberDiv = event.target.parentNode;
-            editNameInput.value = memberDiv.querySelector('strong').textContent;
-            editPositionInput.value = memberDiv.querySelector('br').nextSibling.textContent;
-            editDescriptionInput.value = memberDiv.querySelector('p:last-of-type').textContent;
+            editForm.querySelector('#edit-name').value = name;
+            editForm.querySelector('#edit-position').value = position;
+            editForm.querySelector('#edit-description').value = description;
 
             // Mettre à jour le membre d'équipe lors de la soumission du formulaire d'édition
             editForm.onsubmit = function(event) {
                 event.preventDefault();
-                // Mettre à jour les informations du membre d'équipe
-                memberDiv.querySelector('strong').textContent = editNameInput.value;
-                memberDiv.querySelector('br').nextSibling.textContent = editPositionInput.value;
-                memberDiv.querySelector('p:last-of-type').textContent = editDescriptionInput.value;
+                const editedName = editForm.querySelector('#edit-name').value;
+                const editedPosition = editForm.querySelector('#edit-position').value;
+                const editedDescription = editForm.querySelector('#edit-description').value;
 
-                // Masquer le formulaire d'édition, afficher le formulaire d'ajout et masquer le formulaire de création de profil
+                // Mettre à jour les informations du membre d'équipe
+                namePosition.innerHTML = `<strong>${editedName}</strong><br>${editedPosition}`;
+                descriptionPara.textContent = editedDescription;
+
+                // Masquer le formulaire d'édition et afficher le formulaire d'ajout
                 editForm.style.display = 'none';
-                addMemberForm.style.display = 'block';
-                createProfileForm.style.display = 'none';
+                document.querySelector('#add-member-form').style.display = 'block';
             };
         };
         memberDiv.appendChild(editButton);
@@ -79,49 +71,25 @@ document.addEventListener("DOMContentLoaded", function() {
         memberDiv.appendChild(deleteButton);
 
         // Ajouter le membre d'équipe au conteneur
-        teamContainer.appendChild(memberDiv);
+        document.querySelector('#team-container').appendChild(memberDiv);
 
         // Réinitialiser le formulaire
-        addMemberForm.reset();
+        document.querySelector('#add-member-form').reset();
 
         // Masquer le formulaire de création de profil après l'ajout d'un membre
-        addMemberForm.style.display = 'none';
+        document.querySelector('#add-member-form').style.display = 'none';
     }
 
     // Ajouter un écouteur d'événements pour le formulaire d'ajout
-    addMemberForm.addEventListener('submit', addTeamMember);
+    document.querySelector('#add-member-form').addEventListener('submit', addTeamMember);
 
-    // Ajouter un écouteur d'événements pour afficher le formulaire de création de profil
+    // Afficher le formulaire de création de profil lors du clic sur le bouton "Créer un profil"
     document.getElementById('show-create-form').addEventListener('click', function() {
-        addMemberForm.style.display = 'block';
+        document.querySelector('#add-member-form').style.display = 'block';
     });
 
-    // Ajouter un écouteur d'événements pour le bouton "Éditer" (utilisation de la délégation d'événements)
-    teamContainer.addEventListener('click', function(event) {
-        if (event.target.textContent === 'Éditer') {
-            // Afficher le formulaire d'édition
-            addMemberForm.style.display = 'none';
-            editForm.style.display = 'block';
-
-            // Pré-remplir les champs avec les informations actuelles
-            const memberDiv = event.target.parentNode;
-            editNameInput.value = memberDiv.querySelector('strong').textContent;
-            editPositionInput.value = memberDiv.querySelector('br').nextSibling.textContent;
-            editDescriptionInput.value = memberDiv.querySelector('p:last-of-type').textContent;
-
-            // Mettre à jour le membre d'équipe lors de la soumission du formulaire d'édition
-            editForm.onsubmit = function(event) {
-                event.preventDefault();
-                // Mettre à jour les informations du membre d'équipe
-                memberDiv.querySelector('strong').textContent = editNameInput.value;
-                memberDiv.querySelector('br').nextSibling.textContent = editPositionInput.value;
-                memberDiv.querySelector('p:last-of-type').textContent = editDescriptionInput.value;
-
-                // Masquer le formulaire d'édition, afficher le formulaire d'ajout et masquer le formulaire de création de profil
-                editForm.style.display = 'none';
-                addMemberForm.style.display = 'block';
-                createProfileForm.style.display = 'none';
-            };
-        }
+    // Ajouter un écouteur d'événements pour le bouton "Annuler" dans le formulaire de création de profil
+    document.getElementById('cancel-create').addEventListener('click', function() {
+        document.querySelector('#add-member-form').style.display = 'none';
     });
 });
