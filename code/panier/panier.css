@@ -245,7 +245,7 @@ header img {
     align-items: center;
     width: 40%;
     height: 80px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     background-color: #FCFCFC;
     border-radius: 10px;
@@ -260,7 +260,7 @@ header img {
 }
 
 .checkout button {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 footer {
@@ -398,4 +398,14 @@ footer {
         font-size: 20px;
     }
 } 
+
+@media only screen and (min-width: 768px) and (max-width: 1800px) {
+    .basket-box {
+        width: 80%;
+        margin: 10px 0 10px 0;}
+
+        .total-basket {
+            width: 80%;
+        }
+}
   
