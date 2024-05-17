@@ -224,10 +224,6 @@ header img {
   background-color:#ca3c25;
 }
 
-#panier1, #panier2, #panier3, #panier4 {
-  visibility: hidden;
-}
-
 #panier {
   width: 80%;
   margin-left: auto;
