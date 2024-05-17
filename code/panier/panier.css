@@ -191,7 +191,7 @@ header img {
 
 .name-tool {
     width: 100%;
-    font-size: 20px;
+    font-size: 1em;
     padding-bottom: 10px;
     margin-left: 20px;
 }
@@ -232,7 +232,7 @@ header img {
 
 .increment {
     margin-right: 10px;
-    font-size: 30px;
+    font-size: 1.2em;
     width: 50px;
     display: flex;
     align-items: center;
@@ -264,7 +264,7 @@ header img {
 }
 
 footer {
-    height: 80px;
+    height: auto;
     background-color: #172499;
     margin-top: 20px;
     width: 100%;
@@ -361,14 +361,41 @@ footer {
 }
 
 @media (min-width: 768px) {
-  .button-57 {
-    padding: 8px 24px;
+    .button-57 {
+        padding: 8px 24px;
+  }
+    .button-58 {
+        padding: 8px 8px;
   }
 }
 
-@media (min-width: 768px) {
-    .button-58 {
-      padding: 8px 8px;
+@media only screen and (max-width: 767px) {
+    /* STYLES HERE */
+    .header {
+        display: flex;
+        flex-direction: column;
     }
-  }
+
+    .link-menu > li {
+        list-style: none;
+        display:flex;
+        padding-left: 10px;
+    }
+
+    .basket-box {
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+    .total-basket {
+        width: 100%;
+    }
+
+    .checkout button {
+        font-size: 15px;
+    }
+
+    .total-basket {
+        font-size: 20px;
+    }
+} 
   
