@@ -77,7 +77,8 @@ function moins(id) {
 function ajoutPanier(id_qte, id_ligne, id_qte_panier) {
   var qte = parseInt(document.querySelector(id_qte).innerHTML);
   if(qte > 0) {
-    document.querySelector("#tbody").innerHTML += tr[id_ligne];
+    if(qtePanier[id_qte_panier] == 0)
+      document.querySelector("#tbody").innerHTML += tr[id_ligne];
     document.querySelector("#panier").style.visibility = "visible";
   }
   qtePanier[id_qte_panier] += qte;
